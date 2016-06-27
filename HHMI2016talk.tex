@@ -26,7 +26,7 @@
 
 \begin{document}
 \title{Developing Beginner-Friendly User Interactions for the Clojure Programming Language}
-\author{Richard Stangl, Shamund Gordon, Tony Song}
+\author{Richard Stangl, Shamund Gordon, Tony Song, Ben Goldstein}
 \institute[UMM] % (optional, but mostly needed)
 {
  % \inst{1}%
@@ -42,7 +42,7 @@
 
 \begin{frame}
 
-  \frametitle{Outline}
+\frametitle{Outline}
 \tableofcontents
 \end{frame}
 
@@ -92,21 +92,44 @@ Here we can see halo.
 \end{itemize}
 \end{frame}
 
-%%% If you are including verbatim text, make the frame fragile
+\begin{frame}
+  \frametitle{Continued usability study }
+More data points are in need for data analysis
+\begin{figure}
+%%% note: the file is in the same folder as your .tex file
+\includegraphics[height=55mm]{one-cut.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Project re-structuring}
+How we handle when an error occurs 
+\begin{figure}
+%%% note: the file is in the same folder as your .tex file
+\includegraphics[height=15mm]{Step.png}
+\end{figure}
+\alert{Processing} is the most challenging part
+\end{frame}
+
+
 \begin{frame}[fragile]
-\frametitle{Including text verbatim}
-Typically you include program code verbatim:
+  \frametitle{Project re-structuring}
+Detailed explanation about atom processing
+The advantages of the new structure
 \begin{verbatim}
-(defn get-match-name [fname]
-  "extract a function name from a qualified name"
-  (let [m (nth (re-matches #"(.*)\$(.*)" fname) 2)
-        matched (if m m (nth (re-matches #"(.*)/(.*)" 
-            fname) 2))]
-    (if matched
-      (check-if-anonymous-function 
-           (lookup-funct-name matched))
-      fname)))
+(def seen-failed-asserts (atom {}))
+
+(defn add-to-seen
+  "stores data in a global variable"
+  [binds]
+  (swap! seen-failed-asserts merge binds))
 \end{verbatim}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Discussion}
+Questions?
 \end{frame}
 
 \end{document}
