@@ -1,12 +1,12 @@
 \documentclass{beamer}
-\usetheme{Montpellier}
-\usecolortheme{dolphin}
+\usetheme{Goettingen}
+\usecolortheme{default}
 
 %\usepackage{graphicx} %For jpg figure inclusion
 %\usepackage{times} %For typeface
 %\usepackage{epsfig}
 \usepackage{color} %For Comments
-\usepackage{beamerthemeshadow} %Paul and Lemmon put this in, take out if you want
+%\usepackage{beamerthemeshadow} %Paul and Lemmon put this in, take out if you want
 %\usepackage{hyperref}
 %\usepackage{url}
 
@@ -25,28 +25,89 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\title{•}
-\date{June 29, 2016}
-
-\begin{frame}
-\frametitle{Developing Beginner-Friendly User Interactions for the Clojure Programming Language}
-{\centering
-\noindent
-
-{\it 
-HHMI lunch meeting\par}
+\title{Developing Beginner-Friendly User Interactions for the Clojure Programming Language}
+\author{Richard Stangl, Shamund Gordon, Tony Song}
+\institute[UMM] % (optional, but mostly needed)
+{
+ % \inst{1}%
+  University of Minnesota, Morris
 }
-\end{frame}
-%frame
+\date[]  
+{HHMI lunch meeting, June 29 2016}
 
 \begin{frame}
-\frametitle{Table of contents}
-\tableofcontents  
+  \titlepage
 \end{frame}
 
-\section{Overview of Clojure}
+
+\begin{frame}
+
+  \frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Overview of the project}
+
+\begin{frame}
+  \frametitle{Overview of the project}
+\begin{itemize}
+\item Introduction to the project 
+\item Background information
+\end{itemize}
+\end{frame}
 
 
+
+
+\section{Usability study}
+
+\begin{frame}
+  \frametitle{Usability study}
+\begin{itemize}
+\item Introduction to the usability study 
+\item Standard error message vs Modified error message
+\item Study procedure
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{How to add pictures}
+\begin{figure}
+%%% note: the file is in the same folder as your .tex file
+%\includegraphics[height=45mm]{halo.jpg}
+\end{figure}
+
+Here we can see halo. 
+\end{frame}
+
+
+
+\section{Work in progress}
+
+\begin{frame}
+  \frametitle{Work in progress}
+\begin{itemize}
+\item Continued usability study 
+\item Project re-structuring
+\end{itemize}
+\end{frame}
+
+%%% If you are including verbatim text, make the frame fragile
+\begin{frame}[fragile]
+\frametitle{Including text verbatim}
+Typically you include program code verbatim:
+\begin{verbatim}
+(defn get-match-name [fname]
+  "extract a function name from a qualified name"
+  (let [m (nth (re-matches #"(.*)\$(.*)" fname) 2)
+        matched (if m m (nth (re-matches #"(.*)/(.*)" 
+            fname) 2))]
+    (if matched
+      (check-if-anonymous-function 
+           (lookup-funct-name matched))
+      fname)))
+\end{verbatim}
+\end{frame}
 
 \end{document}
 
