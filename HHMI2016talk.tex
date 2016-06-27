@@ -52,7 +52,7 @@
 \begin{frame}
   \frametitle{Overview of the project}
 \begin{itemize}
-\item Introduction to the project 
+\item Introduction to the project and goals
 \item Background information
 \end{itemize}
 \end{frame}
@@ -84,7 +84,7 @@ Here we can see halo.
 
 \begin{frame}
   \frametitle{Racket Error Messaging}
-  \includegraphics[scale=.17]{R2Rshot}
+  %\includegraphics[scale=.17]{R2Rshot}
 \end{frame}
 
 \begin{frame}
@@ -125,14 +125,16 @@ How we handle when an error occurs
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=15mm]{Step.png}
 \end{figure}
-\alert{Processing} is the most challenging part
+
 \end{frame}
 
 
 \begin{frame}[fragile]
   \frametitle{Project re-structuring}
-Detailed explanation about atom processing
-The advantages of the new structure
+%Detailed explanation about atom processing
+%The advantages of the new structure
+Failing information is stored in a variable for processing
+Add some diagrams here
 \begin{verbatim}
 (def seen-failed-asserts (atom {}))
 
