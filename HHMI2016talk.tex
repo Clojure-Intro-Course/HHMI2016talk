@@ -3,7 +3,6 @@
 \usecolortheme{default}
 \usepackage{graphicx}
 
-%\usepackage{graphicx} %For jpg figure inclusion
 %\usepackage{times} %For typeface
 %\usepackage{epsfig}
 \usepackage{color} %For Comments
@@ -52,7 +51,7 @@
 \begin{frame}
   \frametitle{Overview of the project}
 \begin{itemize}
-\item Introduction to the project and goals
+\item Introduction to the project 
 \item Background information
 \end{itemize}
 \end{frame}
@@ -84,15 +83,35 @@ Here we can see halo.
 
 \begin{frame}
   \frametitle{Racket Error Messaging}
-  %\includegraphics[scale=.17]{R2Rshot}
+  \includegraphics[scale=.17]{R2Rshot}
 \end{frame}
 
 \begin{frame}
   \frametitle{Clojure Standard Error Messaging}
+  \includegraphics[scale=.17]{CS20Sshot}
 \end{frame}
 
 \begin{frame}
   \frametitle{Clojure Modified Error Messaging}
+  \includegraphics[scale=.17]{CM16shot}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Procedure}
+\begin{itemize}
+
+\item Generate Seed Number
+\item Assign Racket \& Clojure Questions at Random
+\item Randomly Assigned Group of either Clojure with Modified or Standard Error Messages
+\item Record for 21 Minutes Racket, Optional Break Time, 21 Minute Clojure
+\item Interview Questions
+  
+\end{itemize}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Study Home Screen}
+  \includegraphics[scale=.17]{StudyHomeScreen}
 \end{frame}
 
 
@@ -125,12 +144,13 @@ How we handle when an error occurs
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=15mm]{Step.png}
 \end{figure}
-
+\alert{Processing} is the most challenging part
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Project re-structuring}
+<<<<<<< HEAD
 %Detailed explanation about atom processing
 %The advantages of the new structure
 Failing information is stored in a variable for processing
@@ -147,6 +167,18 @@ The global variable is not used anymore
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=20mm]{no-atom-ex.png}
 \end{figure}
+=======
+Detailed explanation about atom processing
+The advantages of the new structure
+\begin{verbatim}
+(def seen-failed-asserts (atom {}))
+
+(defn add-to-seen
+  "stores data in a global variable"
+  [binds]
+  (swap! seen-failed-asserts merge binds))
+\end{verbatim}
+>>>>>>> 76de7e75afce2b00e9cc7cdf89c1007f1e8df07f
 \end{frame}
 
 \begin{frame}
