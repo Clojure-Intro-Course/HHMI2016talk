@@ -48,47 +48,56 @@
 
 \section{Overview of the project}
 
-\begin{frame}
-  \frametitle{Overview of the project}
-Contents:
-\begin{enumerate}
-\item Introduction to the project and goals
-\item Background information
-\end{enumerate}
+\begin{frame}[fragile]
+	\frametitle{What is Clojure?}
+	\begin{itemize}
+		\item Functional programming language
+		\item Developed by Rich Hickey in 2007
+		\item example: 
+		\begin{verbatim}
+			(+ 7 4)
+		\end{verbatim}
+		\begin{verbatim}
+			(* 3 9)
+		\end{verbatim}
+	\end{itemize}
 \end{frame}
 
+
 \begin{frame}
-	\frametitle{Introduction to the project and goals}
+	\frametitle{Introduction to the project}
 	\begin{itemize}
 		\item Integrate Clojure into an introductory CS class
 		\item Currently use Racket
 		\begin{itemize}
-			\item Limited teaching language
-			\item Difficult to make complex projects
-			\item Graphics performance issues 
+		\item Functional programming language
+		\item Mostly used for educational purposes
+		\item Similar syntax to Clojure
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{What is Racket?}
+	\frametitle{Why Clojure not Racket?}
 	\begin{itemize}
-		\item Functional programming language
-		\item Ideal for teaching beginner programming
-		\item Only used for educational purposes, not industrial purposes
-		\item Very similar syntax to Clojure
+		\item Quickly gaining popularity in industry
+		\item Run on Java
+		\item Large community and excellent resources
+		\item Excellent libraries (data processing, image recognition, graphical, musical features)
 	\end{itemize}
 \end{frame}
 
+
 \begin{frame}
-	\frametitle{What is Clojure?}
+	\frametitle{Previous work}
 	\begin{itemize}
-		\item Functional programming language
-		\item Developed by Rich Hickey in 2007
-		\item Large community and excellent resources
-		\item Excellent libraries (data processing, image recognition, graphical, musical)
+		\item Improved error messages
+		\item Graphic library
+		\item Testing
 	\end{itemize}
 \end{frame}
+
+
 
 
 
@@ -200,7 +209,6 @@ How we handle when an error occurs
 \begin{frame}
   \frametitle{Project re-structuring}
 %Detailed explanation about atom processing
-%The advantages of the new structure
 Failing information is stored in a variable for processing
 \begin{figure}
 %%% note: the file is in the same folder as your .tex file
@@ -210,7 +218,7 @@ Failing information is stored in a variable for processing
 
 \begin{frame}
   \frametitle{Project re-structuring}
-The global variable is not used anymore
+The global variable is not used anymore bc of a new feature Spec
 \begin{figure}
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=20mm]{no-atom-ex.png}
