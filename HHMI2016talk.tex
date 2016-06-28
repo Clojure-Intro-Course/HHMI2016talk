@@ -167,18 +167,6 @@ The global variable is not used anymore
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=20mm]{no-atom-ex.png}
 \end{figure}
-=======
-Detailed explanation about atom processing
-The advantages of the new structure
-\begin{verbatim}
-(def seen-failed-asserts (atom {}))
-
-(defn add-to-seen
-  "stores data in a global variable"
-  [binds]
-  (swap! seen-failed-asserts merge binds))
-\end{verbatim}
->>>>>>> 76de7e75afce2b00e9cc7cdf89c1007f1e8df07f
 \end{frame}
 
 \begin{frame}
