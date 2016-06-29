@@ -219,14 +219,25 @@ More data points are needed for data analysis
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{Project re-structuring}
-How we handle when an error occurs 
+
+
 \begin{figure}
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=15mm]{Step.png}
 \end{figure}
-\alert{Processing} is the most challenging part
+\textbf{Standard:} 
+\begin{verbatim}
+java.lang.ClassCastException: 
+	java.lang.Boolean cannot be cast to java.lang.Number
+\end{verbatim}
+\textbf{Modified:}
+\begin{verbatim}
+In function +, the second argument false 
+must be a number but is a boolean.
+Found in file test.clj on, or before, line 11
+\end{verbatim}
 \end{frame}
 
 
