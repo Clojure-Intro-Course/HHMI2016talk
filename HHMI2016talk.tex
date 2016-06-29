@@ -89,17 +89,40 @@
 
 
 \begin{frame}
+	\frametitle{Issues with Clojure}
+	\begin{itemize}
+		\item Confusing error messages
+		\item Lack of beginner-friendly graphics libraries in functional style
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
 	\frametitle{Previous work}
 	\begin{itemize}
 		\item Improved error messages
-		\item Graphic library
+		\item Developed graphics library
 		\item Testing
 	\end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Error message example}
+A piece of Clojure code with an error
+\begin{verbatim}
+(- (+ 3 4) 5
+\end{verbatim}
+\end{frame}
 
+%Mentions we're doing usability study to find out how effective our error messages are
+\begin{frame}
+	\frametitle{Standard error messages}
+	\includegraphics[height=75mm]{standard.png}
+\end{frame}
 
-
+\begin{frame}
+	\frametitle{Improved error messages}
+	\includegraphics[height=30mm]{improved.png}
+\end{frame}
 
 \section{Usability study}
 
@@ -219,7 +242,7 @@ Failing information is stored in a variable for processing
 
 \begin{frame}
   \frametitle{Project re-structuring}
-The global variable is not used anymore bc of a new feature Spec
+Using a new feature of Clojure, the global variable is no longer used
 \begin{figure}
 %%% note: the file is in the same folder as your .tex file
 \includegraphics[height=20mm]{no-atom-ex.png}
